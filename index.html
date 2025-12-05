@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Know if you're competitive before you apply - Compare your resume to job postings and analyze your readiness">
+  <title>Application Readiness Platform - Know Before You Apply</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Application Readiness Platform</h1>
+      <p class="tagline">Know if you're competitive before you apply</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-view="resume">My Resume</button>
+      <button class="nav-tab" data-view="jobs">Job Postings</button>
+      <button class="nav-tab" data-view="comparison">Compare & Analyze</button>
+    </nav>
+
+    <!-- Resume View -->
+    <section id="resume-view" class="view-section active">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Master Resume</h2>
+        </div>
+        
+        <form id="resume-form">
+          <!-- Contact Information -->
+          <h3>Contact Information</h3>
+          <div class="form-group">
+            <label class="form-label" for="resume-name">Full Name *</label>
+            <input type="text" id="resume-name" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="resume-email">Email *</label>
+            <input type="email" id="resume-email" class="form-input" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="resume-phone">Phone</label>
+            <input type="tel" id="resume-phone" class="form-input">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="resume-location">Location</label>
+            <input type="text" id="resume-location" class="form-input" placeholder="City, State">
+          </div>
+
+          <!-- Professional Summary -->
+          <h3 class="mt-lg">Professional Summary</h3>
+          <div class="form-group">
+            <label class="form-label" for="resume-summary">Summary</label>
+            <textarea id="resume-summary" class="form-textarea" placeholder="Brief overview of your professional background and goals"></textarea>
+          </div>
+
+          <!-- Skills -->
+          <h3 class="mt-lg">Skills</h3>
+          <div class="form-group">
+            <label class="form-label" for="resume-skills">Skills *</label>
+            <textarea id="resume-skills" class="form-textarea" placeholder="Enter your skills, separated by commas (e.g., JavaScript, React, Node.js, Python, SQL)" required></textarea>
+            <span class="form-hint">Separate skills with commas. Be specific!</span>
+          </div>
+
+          <!-- Experience -->
+          <h3 class="mt-lg">Work Experience</h3>
+          <div class="form-group">
+            <label class="form-label" for="resume-experience">Experience</label>
+            <textarea id="resume-experience" class="form-textarea" placeholder="List your work experience, including job titles, companies, dates, and key responsibilities"></textarea>
+            <span class="form-hint">Include job titles, companies, and key achievements</span>
+          </div>
+
+          <!-- Education -->
+          <h3 class="mt-lg">Education</h3>
+          <div class="form-group">
+            <label class="form-label" for="resume-education">Education</label>
+            <textarea id="resume-education" class="form-textarea" placeholder="List your education, including degrees, institutions, and graduation dates"></textarea>
+          </div>
+
+          <!-- Certifications -->
+          <h3 class="mt-lg">Certifications & Achievements</h3>
+          <div class="form-group">
+            <label class="form-label" for="resume-certifications">Certifications</label>
+            <textarea id="resume-certifications" class="form-textarea" placeholder="List any relevant certifications, licenses, or achievements"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Save Resume</button>
+        </form>
+      </div>
+
+      <!-- Saved Resumes List -->
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Saved Resumes</h2>
+        </div>
+        <div id="resume-list" class="item-list">
+          <div class="empty-state">
+            <div class="empty-state-icon">📄</div>
+            <p>No resumes saved yet. Create your first resume above!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jobs View -->
+    <section id="jobs-view" class="view-section">
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Add Job Posting</h2>
+        </div>
+        
+        <form id="job-form">
+          <div class="form-group">
+            <label class="form-label" for="job-title">Job Title *</label>
+            <input type="text" id="job-title" class="form-input" placeholder="e.g., Senior Software Engineer" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="job-company">Company *</label>
+            <input type="text" id="job-company" class="form-input" placeholder="e.g., Tech Corp Inc." required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="job-location">Location</label>
+            <input type="text" id="job-location" class="form-input" placeholder="e.g., Remote, San Francisco, CA">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="job-url">Job Posting URL</label>
+            <input type="url" id="job-url" class="form-input" placeholder="https://...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="job-description">Job Description</label>
+            <textarea id="job-description" class="form-textarea" placeholder="Paste the full job description here"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="job-requirements">Requirements & Qualifications *</label>
+            <textarea id="job-requirements" class="form-textarea" placeholder="List the required skills, experience, and qualifications from the job posting" required></textarea>
+            <span class="form-hint">Include all technical skills, years of experience, education requirements, etc.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Save Job Posting</button>
+        </form>
+      </div>
+
+      <!-- Saved Jobs List -->
+      <div class="card">
+        <div class="card-header">
+          <h2 class="card-title">Saved Job Postings</h2>
+        </div>
+        <div id="jobs-list" class="item-list">
+          <div class="empty-state">
+            <div class="empty-state-icon">💼</div>
+            <p>No job postings saved yet. Add your first job above!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison View -->
+    <section id="comparison-view" class="view-section">
+      <div class="comparison-container">
+        <!-- Selection Panel -->
+        <div class="selection-panel">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Select Resume</h3>
+            </div>
+            <div id="resume-selector" class="item-list">
+              <div class="empty-state">
+                <p>No resumes available. Create a resume first!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Select Job</h3>
+            </div>
+            <div id="job-selector" class="item-list">
+              <div class="empty-state">
+                <p>No jobs available. Add a job posting first!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Analysis Results -->
+        <div id="analysis-results" class="hidden">
+          <!-- Match Score -->
+          <div class="match-score">
+            <div class="score-circle">
+              <span id="match-percentage">0%</span>
+            </div>
+            <p class="score-label">Match Score</p>
+            <p id="match-message" class="tagline"></p>
+          </div>
+
+          <!-- Skills Comparison -->
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">Skills Gap Analysis</h2>
+            </div>
+            
+            <div class="skills-comparison">
+              <div class="skills-column">
+                <h3>✓ Your Matching Skills</h3>
+                <div id="matching-skills"></div>
+              </div>
+              
+              <div class="skills-column">
+                <h3>⚠ Skills You're Missing</h3>
+                <div id="missing-skills"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detailed Comparison -->
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">Detailed Comparison</h2>
+            </div>
+            <div id="detailed-comparison"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script src="resume-manager.js"></script>
+  <script src="job-manager.js"></script>
+  <script src="comparison-engine.js"></script>
+</body>
+</html>
