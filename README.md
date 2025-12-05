@@ -317,6 +317,5 @@ You now have a fully functional Application Readiness Platform that helps you:
 - ✅ Identify skill gaps and get actionable recommendations
 - ✅ Make data-driven decisions about where to apply
 
-**Next Step**: Open [index.html](file:///home/bazzite/.gemini/antigravity/playground/cryo-schrodinger/index.html) in your browser and start using it!
 
-The foundation is solid and ready for future AI enhancements when you're ready to add them.
+
