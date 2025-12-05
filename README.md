@@ -24,7 +24,6 @@ But simplified - just structured data entry, skip the complex parsing initially
 
 ## 📁 Project Structure
 
-The application consists of 5 files in `/home/bazzite/.gemini/antigravity/playground/cryo-schrodinger/`:
 
 - [index.html](file:///home/bazzite/.gemini/antigravity/playground/cryo-schrodinger/index.html) - Main application structure
 - [styles.css](file:///home/bazzite/.gemini/antigravity/playground/cryo-schrodinger/styles.css) - Complete design system with modern dark theme
@@ -145,12 +144,7 @@ The application consists of 5 files in `/home/bazzite/.gemini/antigravity/playgr
 ### Getting Started
 
 1. **Open the Application**
-   ```bash
-   # Simply open in your browser
-   firefox /home/bazzite/.gemini/antigravity/playground/cryo-schrodinger/index.html
-   # or
-   google-chrome /home/bazzite/.gemini/antigravity/playground/cryo-schrodinger/index.html
-   ```
+   - In your browser of choice open index.html.
 
 2. **Create Your First Resume**
    - Navigate to "My Resume" tab (default view)
