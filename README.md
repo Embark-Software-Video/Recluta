@@ -3,7 +3,7 @@
 
 This app was originally going to be a resume builder but we have pivoted to an Application Readiness Platform
 
-Below is the prompt that convinced me to pivot. 
+Below is the prompt response that convinced me to pivot. 
 
 - The Core Problem You Should Solve
 People don't need to apply to MORE jobs. They need to know WHICH jobs they can actually win.
