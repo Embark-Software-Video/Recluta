@@ -7,8 +7,10 @@ Below is the prompt response that convinced me to pivot.
 
 # The Core Problem You Should Solve
 
-## People don't need to apply to MORE jobs. They need to know WHICH jobs they can actually win.
-## The painful truth: 95% of applications are wasted effort. Most job seekers apply to roles they're not competitive for and never hear back. That's the real problem.
+## People don't need to apply to MORE jobs. 
+## They need to know WHICH jobs they can actually win.
+## The painful truth: 95% of applications are wasted effort. 
+## Most job seekers apply to roles they're not competitive for and never hear back. That's the real problem.
 
 
 - The Pivot: "Application Readiness Platform"
